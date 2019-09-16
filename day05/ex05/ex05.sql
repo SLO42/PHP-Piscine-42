@@ -1,0 +1,1 @@
+DELETE FROM db_saolivei.ft_table LIMIT 5;

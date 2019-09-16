@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang ="eng">
+    <title>Mendeleiev.html</title>
+    <meta charset="utf-8">
+    <STYLE>
+        :root
+        {
+            --element: default;
+        }
+        .container
+        {
+            display: grid;
+            grid-template-columns: repeat(18, 100px);
+            grid-auto-rows: repeat(10, 100px);
+            grid-template-areas:
+                "NM . . . . . . . P . . . . . . . . NG"
+                "M M . . . . . . . . . . LB NM NM NM NM NG"
+                "M M . . . . . . . . . . M LB NM NM NM NG"
+                "M M M M M M M M M M M M M LB LB NM NM NG"
+                "M M M M M M M M M M M M M M LB LB NM NG"
+                "M M down M M M M M M M M M M M M M NM NG"
+                "M M down M M M M M LG LG LG M LG LG LG LG LG NG"
+                ". . down . . . . . . . . . . . . . . ."
+                ". . LP LP LP LP LP LP LP LP LP LP LP LP LP LP LP"
+                ". . LV LV LV LV LV LV LV LV LV LV LV LV LV LV LV";
+            padding: 10px;
+        }
+        /* next step is to create the variable for where the emelemnt goes on grid.*/
+        .container .item
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: 20px 30px 20px;
+            grid-template-rows: 15px 30px 15px;
+            grid-template-areas: 
+                ". . w"
+                ". n ."
+                "v . .";
+            white-space: nowrap;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+        .container .item#NM
+        {
+            background-color:green;
+        }
+        .container .item#M
+        {
+            background-color: violet;
+        }
+        .container .item#LG
+        {
+            background-color:lightgreen;
+        }
+        .container .item#NG
+        {
+            background-color:red;
+        }
+        .container .item#LP
+        {
+            background-color:rgba(150, 17, 50, 100)
+        }
+        .container .item.space
+        {
+            
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 20px);
+            grid-template-rows: repeat(3, 20px);
+            grid-template-areas: 
+                ". . w"
+                ". n ."
+                "v . .";
+            background-color: transparent;
+            border: 0px solid transparent;
+            padding: 11px;
+        }
+        .item .symbol
+        {
+            position:inherit;
+            grid-area: n;
+            font-weight: bold;
+            align-self: center;
+            text-align: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+        .item .num
+        {
+            font-size: small;
+            position: inherit;
+            grid-area: v;
+            align-self: end;
+            text-align: left;
+            justify-content: left;
+            bottom: 0;
+            left: 0;
+        }
+        .item .weight
+        {
+            font-size: small;
+            position: inherit;
+            grid-area: w;
+            text-align: right;
+        }
+        body
+        {
+            display: grid;
+            background-color: skyblue;
+        }
+        body img
+        {
+            position: relative;
+            width: 320px;
+            height: 280px;
+            top: 250px;
+            left: 700px;
+            background-color: skyblue;
+        }
+    </STYLE>
+    <body>
+        <img src="https://i.chzbgr.com/full/8183068928/hDAF1437B/" alt="BaCoN.jpeg">
+    <div class="container">
+        <div> <!-- first column  -->
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">H</div><div class="num"contenteditable="true">1.0008</div><div class="weight"contenteditable="true">1</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Li</div><div class="num"contenteditable="true">6.94</div><div class="weight"contenteditable="true">3</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Na</div><div class="num"contenteditable="true">22.990</div><div class="weight"contenteditable="true">11</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">K</div><div class="num"contenteditable="true">39.098</div><div class="weight"contenteditable="true">19</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Rb</div><div class="num"contenteditable="true">85.468</div><div class="weight"contenteditable="true">37</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Fr</div><div class="num"contenteditable="true">132.91</div><div class="weight"contenteditable="true">87</div></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+        </div>
+        <div> <!-- Second Column -->
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Be</div><div class="num"contenteditable="true">9.0122</div><div class="weight"contenteditable="true">4</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Mg</div><div class="num"contenteditable="true">24.305</div><div class="weight"contenteditable="true">12</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ca</div><div class="num"contenteditable="true">40.078</div><div class="weight"contenteditable="true">20</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Sr</div><div class="num"contenteditable="true">87.62</div><div class="weight"contenteditable="true">38</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ba</div><div class="num"contenteditable="true">137.33</div><div class="weight"contenteditable="true">56</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ra</div><div class="num"contenteditable="true">226</div><div class="weight"contenteditable="true">88</div></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+        </div>
+        <div> <!-- Third Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Sc</div><div class="num"contenteditable="true">44.956</div><div class="weight"contenteditable="true">21</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Y</div><div class="num"contenteditable="true">88.906</div><div class="weight"contenteditable="true">39</div></div>
+            <div class="item space down"></div>
+            <div class="item space down"></div>
+            <div class="item space down"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">La</div><div class="num"contenteditable="true">138.91</div><div class="weight"contenteditable="true">57</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Ac</div><div class="num"contenteditable="true">227</div><div class="weight"contenteditable="true">89</div></div>
+        </div>
+        <div> <!-- Fourth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ti</div><div class="num"contenteditable="true">47.867</div><div class="weight"contenteditable="true">22</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Zr</div><div class="num"contenteditable="true">91.224</div><div class="weight"contenteditable="true">40</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Hf</div><div class="num"contenteditable="true">178.49</div><div class="weight"contenteditable="true">72</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Rf</div><div class="num"contenteditable="true">267</div><div class="weight"contenteditable="true">104</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Ce</div><div class="num"contenteditable="true">140.12</div><div class="weight"contenteditable="true">58</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Th</div><div class="num"contenteditable="true">232.04</div><div class="weight"contenteditable="true">90</div></div>
+        </div>
+        <div> <!-- Fifth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">V</div><div class="num"contenteditable="true">50.942</div><div class="weight"contenteditable="true">23</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Nb</div><div class="num"contenteditable="true">92.906</div><div class="weight"contenteditable="true">41</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ta</div><div class="num"contenteditable="true">180.95</div><div class="weight"contenteditable="true">73</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">M</div><div class="num"contenteditable="true">268</div><div class="weight"contenteditable="true">105</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">M</div><div class="num"contenteditable="true">140.91</div><div class="weight"contenteditable="true">59</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Pa</div><div class="num"contenteditable="true">231.04</div><div class="weight"contenteditable="true">91</div></div>
+        </div>
+        <div> <!-- Sixth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Cr</div><div class="num"contenteditable="true">51.996</div><div class="weight"contenteditable="true">24</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Mo</div><div class="num"contenteditable="true">95.95</div><div class="weight"contenteditable="true">42</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">W</div><div class="num"contenteditable="true">183.84</div><div class="weight"contenteditable="true">74</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Sg</div><div class="num"contenteditable="true">269</div><div class="weight"contenteditable="true">106</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Nd</div><div class="num"contenteditable="true">144.24</div><div class="weight"contenteditable="true">60</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">U</div><div class="num"contenteditable="true">238.03</div><div class="weight"contenteditable="true">92</div></div>
+        </div>
+        <div> <!-- Seventh Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Mn</div><div class="num"contenteditable="true">54.938</div><div class="weight"contenteditable="true">25</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Tc</div><div class="num"contenteditable="true">98</div><div class="weight"contenteditable="true">43</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Re</div><div class="num"contenteditable="true">186.21</div><div class="weight"contenteditable="true">75</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Bh</div><div class="num"contenteditable="true">270</div><div class="weight"contenteditable="true">107</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Pm</div><div class="num"contenteditable="true">145</div><div class="weight"contenteditable="true">61</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Np</div><div class="num"contenteditable="true">237</div><div class="weight"contenteditable="true">93</div></div>
+        </div>
+        <div> <!-- Eighth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Fe</div><div class="num"contenteditable="true">55.845</div><div class="weight"contenteditable="true">26</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ru</div><div class="num"contenteditable="true">101.07</div><div class="weight"contenteditable="true">44</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Os</div><div class="num"contenteditable="true">190.23</div><div class="weight"contenteditable="true">76</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Hs</div><div class="num"contenteditable="true">270</div><div class="weight"contenteditable="true">108</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Sm</div><div class="num"contenteditable="true">150.36</div><div class="weight"contenteditable="true">62</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Pu</div><div class="num"contenteditable="true">244</div><div class="weight"contenteditable="true">94</div></div>
+        </div>
+        <div> <!-- Nineth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Co</div><div class="num"contenteditable="true">58.933</div><div class="weight"contenteditable="true">27</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Rh</div><div class="num"contenteditable="true">102.91</div><div class="weight"contenteditable="true">45</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ir</div><div class="num"contenteditable="true">192.22</div><div class="weight"contenteditable="true">77</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Mt</div><div class="num"contenteditable="true">278</div><div class="weight"contenteditable="true">109</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Eu</div><div class="num"contenteditable="true">151.96</div><div class="weight"contenteditable="true">63</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Am</div><div class="num"contenteditable="true">243</div><div class="weight"contenteditable="true">95</div></div>
+        </div>
+        <div> <!-- Tenth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ni</div><div class="num"contenteditable="true">58.693</div><div class="weight"contenteditable="true">28</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Pd</div><div class="num"contenteditable="true">106.42</div><div class="weight"contenteditable="true">46</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Pt</div><div class="num"contenteditable="true">195.08</div><div class="weight"contenteditable="true">78</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ds</div><div class="num"contenteditable="true">281</div><div class="weight"contenteditable="true">110</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Gd</div><div class="num"contenteditable="true">157.25</div><div class="weight"contenteditable="true">64</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Cm</div><div class="num"contenteditable="true">247</div><div class="weight"contenteditable="true">96</div></div>
+        </div>
+        <div> <!-- Eleventh Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Cu</div><div class="num"contenteditable="true">63.546</div><div class="weight"contenteditable="true">29</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ag</div><div class="num"contenteditable="true">107.87</div><div class="weight"contenteditable="true">47</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Au</div><div class="num"contenteditable="true">196.97</div><div class="weight"contenteditable="true">79</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Rg</div><div class="num"contenteditable="true">282</div><div class="weight"contenteditable="true">111</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Tb</div><div class="num"contenteditable="true">158.93</div><div class="weight"contenteditable="true">65</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Bk</div><div class="num"contenteditable="true">247</div><div class="weight"contenteditable="true">97</div></div>
+        </div>
+        <div> <!-- Twelth Column -->
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Zn</div><div class="num"contenteditable="true">65.38</div><div class="weight"contenteditable="true">30</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Cd</div><div class="num"contenteditable="true">107.87</div><div class="weight"contenteditable="true">48</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Hg</div><div class="num"contenteditable="true">200.59</div><div class="weight"contenteditable="true">80</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Cn</div><div class="num"contenteditable="true">285</div><div class="weight"contenteditable="true">112</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Dy</div><div class="num"contenteditable="true">162.50</div><div class="weight"contenteditable="true">66</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Cf</div><div class="num"contenteditable="true">251</div><div class="weight"contenteditable="true">98</div></div>
+        </div>
+        <div> <!-- Thirteenth Column -->
+            <div class="item space"></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">B</div><div class="num"contenteditable="true">10.81</div><div class="weight"contenteditable="true">5</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Al</div><div class="num"contenteditable="true">26.982</div><div class="weight"contenteditable="true">13</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ga</div><div class="num"contenteditable="true">69.723</div><div class="weight"contenteditable="true">31</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">In</div><div class="num"contenteditable="true">114.82</div><div class="weight"contenteditable="true">49</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Ti</div><div class="num"contenteditable="true">204.38</div><div class="weight"contenteditable="true">81</div></div>
+            <div class="item"id="LG"><div class="symbol"contenteditable="true">Uut</div><div class="num"contenteditable="true">286</div><div class="weight"contenteditable="true">113</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Ho</div><div class="num"contenteditable="true">164.91</div><div class="weight"contenteditable="true">67</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Es</div><div class="num"contenteditable="true">252</div><div class="weight"contenteditable="true">99</div></div>
+        </div>
+        <div> <!-- Fourteenth Column -->
+            <div class="item space"></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">C</div><div class="num"contenteditable="true">12.011</div><div class="weight"contenteditable="true">6</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Si</div><div class="num"contenteditable="true">28.085</div><div class="weight"contenteditable="true">14</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Ge</div><div class="num"contenteditable="true">72.630</div><div class="weight"contenteditable="true">33</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Sn</div><div class="num"contenteditable="true">118.71</div><div class="weight"contenteditable="true">50</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Pb</div><div class="num"contenteditable="true">207.2</div><div class="weight"contenteditable="true">82</div></div>
+            <div class="item"id="LG"><div class="symbol"contenteditable="true">Fl</div><div class="num"contenteditable="true">289</div><div class="weight"contenteditable="true">114</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Er</div><div class="num"contenteditable="true">167.26</div><div class="weight"contenteditable="true">68</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Fm</div><div class="num"contenteditable="true">257</div><div class="weight"contenteditable="true">100</div></div>
+        </div>
+        <div> <!-- Fithteenth Column -->
+            <div class="item space"></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">N</div><div class="num"contenteditable="true">14.007</div><div class="weight"contenteditable="true">7</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">P</div><div class="num"contenteditable="true">30.974</div><div class="weight"contenteditable="true">15</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">As</div><div class="num"contenteditable="true">74.922</div><div class="weight"contenteditable="true">34</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Sb</div><div class="num"contenteditable="true">121.76</div><div class="weight"contenteditable="true">51</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Bi</div><div class="num"contenteditable="true">208.98</div><div class="weight"contenteditable="true">83</div></div>
+            <div class="item"id="LG"><div class="symbol"contenteditable="true">Uup</div><div class="num"contenteditable="true">289</div><div class="weight"contenteditable="true">115</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Tm</div><div class="num"contenteditable="true">168.91</div><div class="weight"contenteditable="true">69</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Md</div><div class="num"contenteditable="true">258</div><div class="weight"contenteditable="true">101</div></div>
+        </div>
+        <div> <!-- Sixteenth Column -->
+            <div class="item space"></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">O</div><div class="num"contenteditable="true">15.999</div><div class="weight"contenteditable="true">8</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">S</div><div class="num"contenteditable="true">32.06</div><div class="weight"contenteditable="true">16</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Se</div><div class="num"contenteditable="true">78.971</div><div class="weight"contenteditable="true">34</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Te</div><div class="num"contenteditable="true">127.60</div><div class="weight"contenteditable="true">52</div></div>
+            <div class="item"id="M"><div class="symbol"contenteditable="true">Po</div><div class="num"contenteditable="true">209</div><div class="weight"contenteditable="true">84</div></div>
+            <div class="item"id="LG"><div class="symbol"contenteditable="true">Lv</div><div class="num"contenteditable="true">293</div><div class="weight"contenteditable="true">116</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Yb</div><div class="num"contenteditable="true">173.05</div><div class="weight"contenteditable="true">70</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">No</div><div class="num"contenteditable="true">259</div><div class="weight"contenteditable="true">102</div></div>
+        </div>
+        <div> <!-- Seventeeth Column -->
+            <div class="item space"></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">F</div><div class="num"contenteditable="true">18.998</div><div class="weight"contenteditable="true">9</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Cl</div><div class="num"contenteditable="true">35.45</div><div class="weight"contenteditable="true">17</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">Br</div><div class="num"contenteditable="true">79.904</div><div class="weight"contenteditable="true">35</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">I</div><div class="num"contenteditable="true">126.90</div><div class="weight"contenteditable="true">53</div></div>
+            <div class="item"id="NM"><div class="symbol"contenteditable="true">At</div><div class="num"contenteditable="true">210</div><div class="weight"contenteditable="true">86</div></div>
+            <div class="item"id="LG"><div class="symbol"contenteditable="true">Uus</div><div class="num"contenteditable="true">294</div><div class="weight"contenteditable="true">117</div></div>
+            <div class="item space"></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Lu</div><div class="num"contenteditable="true">174.97</div><div class="weight"contenteditable="true">71</div></div>
+            <div class="item"id="LP"><div class="symbol"contenteditable="true">Lr</div><div class="num"contenteditable="true">266</div><div class="weight"contenteditable="true">103</div></div>
+        </div>
+        <div> <!-- Eightteenth Column -->
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">He</div><div class="num"contenteditable="true">4.0026</div><div class="weight"contenteditable="true">2</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Ne</div><div class="num"contenteditable="true">20.180</div><div class="weight"contenteditable="true">10</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Ar</div><div class="num"contenteditable="true">39.948</div><div class="weight"contenteditable="true">18</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Kr</div><div class="num"contenteditable="true">83.798</div><div class="weight"contenteditable="true">36</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Xe</div><div class="num"contenteditable="true">131.29</div><div class="weight"contenteditable="true">54</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Rn</div><div class="num"contenteditable="true">222</div><div class="weight"contenteditable="true">85</div></div>
+            <div class="item"id="NG"><div class="symbol"contenteditable="true">Og</div><div class="num"contenteditable="true">294</div><div class="weight"contenteditable="true">118</div></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+            <div class="item space"></div>
+        </div>
+    </div>
+    </body>
+</html>

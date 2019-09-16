@@ -1,0 +1,37 @@
+body{
+    white-space: nowrap;
+    background-color: grey
+}
+
+.topsquare{
+    position: relative;
+    grid-area: top;
+    display: grid;
+    grid-template-areas: 
+    "text space space right";
+    background-color:  rgb(87, 87, 87);
+    width: 1420;
+    height: 136;
+}
+.container .topsqaure .text img{
+    height: 136px;
+    width: 136px;
+}
+.toplong
+{
+    display: block;
+    width: 1420px;
+    height: 136px;
+    border-radius: 25px;
+    color: rgb(87, 87, 87);
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "top top top"
+    "mdl mid mdr"
+    "btl btm btr";
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 20% 60% 20%;
+}

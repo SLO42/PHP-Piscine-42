@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>d09/ex01/calc.html</title>
+            <br />
+    </head>
+    <body>
+        <div id="calc" onload="calc.html;">
+            <script type="text/javascript">
+                var inactivityTimer = function ()
+                {
+                    var time;
+                    window.onload = resetTimer;
+                    // DOM Events
+                    document.onmousemove = resetTimer;
+                    document.onkeypress = resetTimer;
+
+                    function popUp() {
+                        alert('Please, use me...');
+                    }
+
+                    function resetTimer() {
+                        clearTimeout(time);
+                        time = setTimeout(popUp, 30000)
+                        // 1000 milliseconds = 1 second
+                    }
+                };
+                inactivityTimer();
+            </script>
+            <form id="myCalc" style="display:flex;justify-content:20px;align-content:100px;">
+                <input type="text" name="n1" value="0" style="display:flex; justify-content:space-between;align-items: left">
+                   <select name="op" style="display:flex; justify-content:center;">
+                       <option value="+">+</option>
+                       <option value="-">-</option>
+                       <option value="*">*</option>
+                       <option value="/">/</option>
+                       <option value="%">%</option>
+                   </select>
+                <input type="text" name="n2" value="0" style="display:flex; justify-content:right;">
+                <br />
+                <button type="button" onclick="myCalc()">Try me!</button>
+            </form>
+            <script>
+                function myCalc()
+                {
+                    var frm = document.getElementById("myCalc");
+                    if (frm.elements[0].value.search(/\D/) >= 0|| frm.elements[2].value.search(/\D/) >= 0) {
+                        return alert("Error :(");
+                    }
+                    var num1 = parseFloat(frm.elements[0].value),
+                    num2 = parseFloat(frm.elements[2].value),
+                    sign = frm.elements[1].value,
+                    total;
+                    if (sign == "+")
+                        total = num1 + num2;
+                    else if (sign == "-")
+                        total = num1 - num2;
+                    else if (sign == "*")
+                        total = num1 * num2;
+                    else if (sign == "/" || sign == "%") {
+                        if (num1 == 0 || num2 == 0) {
+                            console.log("It's over 9000!");
+                            return alert("It's over 9000!");
+                        }
+                        if (sign == "/")
+                            total = num1 / num2;
+                        else
+                            total = num1 % num2;
+                    }
+                    alert("your total is: " + total);
+                    console.log(total);
+                }
+            </script>
+        </div>
+    </body>
+    <foot>
+        <div style="position: fixed;bottom: 0;width: 100%;">
+            <marquee>
+                Saolivei
+            </marquee>
+        </div>
+    </foot>
+</html>

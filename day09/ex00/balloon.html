@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <div id="start"> <meta charset=utf-8 />
+        <head>
+            <title>JavaScript</title>
+        </head>
+        <body>
+            <div id="balloon" onclick="grow()" onmouseout="mOut()" style="height: 200px; width:200px; background: red; border-radius: 50%;display: flex;margin-left: auto;margin-right: auto;">
+                <script>
+                    function grow() {
+                        var canvas = document.getElementById('balloon'),
+                            cHeight = parseInt(canvas.style.height.substring(0, canvas.style.height.indexOf("px"))),
+                            cWidth = parseInt(canvas.style.width.substring(0, canvas.style.width.indexOf("px")));
+                            cHeight += 5;
+                            cWidth += 5;
+                            if (canvas.style.background == 'red')
+                                canvas.style.background = 'green';
+                            else if (canvas.style.background == 'green')
+                                canvas.style.background = 'blue';
+                            else if (canvas.style.background == 'blue')
+                                canvas.style.background = 'red';
+                            if (cHeight > 420)
+                            {
+                                cHeight = 200;
+                                cWidth = 200;
+                            }
+                            canvas.style.height = cHeight.toString() + "px";
+                            canvas.style.width = cWidth.toString() + "px"; 
+                    }
+                    function mOut(){
+                        var canvas = document.getElementById('balloon'),
+                        cHeight = parseInt(canvas.style.height.substring(0, canvas.style.height.indexOf("px"))),
+                        cWidth = parseInt(canvas.style.width.substring(0, canvas.style.width.indexOf("px")));
+                        if (cHeight > 200.00){
+                            cHeight -= 2.5;
+                            cWidth -= 2.5;
+                            if (cHeight < 200){
+                                cHeight = 200;
+                                cWidth = 200;
+                            }
+                            canvas.style.height = cHeight.toString() + "px";
+                            canvas.style.width = cWidth.toString() + "px"; 
+                        }
+                        if (canvas.style.background == 'red')
+                            canvas.style.background = 'blue';
+                        else if (canvas.style.background == 'green')
+                            canvas.style.background = 'red';
+                        else if (canvas.style.background == 'blue')
+                            canvas.style.background = 'green';
+                    }
+                </script>
+            </div>
+        </body>
+    </div>
+</html>
